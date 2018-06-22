@@ -12,7 +12,8 @@ export default class NativeApp extends React.Component {
     }
   }
   async componentWillMount() {
-    await Font.loadAsync({ 'Material Icons': require('@expo/vector-icons/fonts/MaterialIcons.ttf') })
+    // change Material Icons to MaterialIcons to add error
+    await Font.loadAsync({ 'MaterialIcons': require('@expo/vector-icons/fonts/MaterialIcons.ttf') })
     this.setState({ fontsAreLoaded: true })
   }
   render() {
@@ -23,8 +24,6 @@ export default class NativeApp extends React.Component {
 
   }
 }
-
-
 
 export class HybridApp extends React.Component {
  render() {
